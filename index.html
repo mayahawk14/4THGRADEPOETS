@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html data-init="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<title>confessional</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      
+      .passage a::before {
+				  content: '» ';
+				}
+      
+      .speaker {
+				  font-family: system-ui, sans-serif;
+				  font-size: .9em;
+				  line-height: 1.3em;
+				  color: #ded8cc;
+				  text-shadow: 0 0 2px #544f46;
+				}
+      
+      	@-webkit-keyframes glow {
+				  from {
+				    text-shadow: 0 0 5px #f5d58c, 0 0 10px #634e32, 0 0 15px #634e32, 0 0 20px #634e32;
+				  }
+				  to {
+				    text-shadow: 0 0 10px #f5d58c, 0 0 15px #634e32, 0 0 20px #634e32, 0 0 25px #634e32;
+				  }
+				}
+      
+      .menutitle {
+				  font-size: 2em;
+				  font-family: var(--serif);
+				  font-weight: bold;
+				  letter-spacing: .1em;
+				  -webkit-animation: glow 2s ease-in-out infinite alternate;
+				  -moz-animation: glow 2s ease-in-out infinite alternate;
+				  animation: glow 2s ease-in-out infinite alternate;
+				}
+      
+      .menu .passage a::before {
+				  content: '» ';
+				  font-size: 1.5em;
+				}
+
+      .menuadd .passage a::before {
+				  content: none;
+				}
+
+			.menu .passage a:hover {
+				  color: #f5d4a9;
+				  text-shadow: 0 0 5px #f5e3cb;
+				}
+
+      .intro .passage a::before {
+				  content: none;
+				}
+
+				.intro .passage a {
+				  cursor: pointer;
+				  font-size: 2em;
+				  color: #8f8674;
+				  text-align: center;
+				}
+
+				.intro .passage a:hover {
+				  color: #b8b0a2;
+				}
+
+				body.intro {
+				  background: linear-gradient(180deg, rgba(32,32,38,1) 0%, rgba(33,33,34,1) 53%, rgba(47,42,31,1) 100%);
+				  color: var(--text);
+				  text-shadow: 0 0 2px #5c6982;
+				}
+      body {
+				  background: linear-gradient(180deg, rgba(32,32,38,1) 0%, rgba(33,33,34,1) 53%, rgba(47,42,31,1) 100%);
+				  color: var(--text);
+				  text-shadow: 0 0 2px #5c6982;
+				  background-size: 100%;
+				  height: 100vh;
+				  width: 90vw;
+				  max-width: 1400px;
+				  display: flex;
+				  align-items: center;
+				  overflow: hidden;
+				  margin: 0 auto;
+				  cursor: default;
+				}
+      #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -100; /* Puts the video behind content */
+        object-fit: cover; /* Ensures video covers screen without stretching */
+    }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+    <source src="assets/background_code.MOV" type="video/MOV">
+      
+</video>
+  </body>
+</html>
